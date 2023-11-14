@@ -1,23 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.scss'
+import Header from './components/Header'
+import Content from './components/Content'
+import Footer from './components/Footer'
+import Welcome from './components/Welcome'
+import Hello from './components/Hello'
 
 function App() {
-  const [count, setCount] = useState(1)
-  function CallMethod() {
-    let variation = 5;
-    const a = 5 + count
-    setCount(a)
-   console.log(a)
-  }
+  
   return (
-    <>
-      <div className="card">
-        <button onClick={()=>CallMethod()}>Click me</button>
-        {count}
-      </div>
-    </>
+    <div >
+      <Header />
+      <Content />
+      {/* <Welcome />  */}
+      <Hello />
+      <Footer />
+    </div>
   )
 }
 
